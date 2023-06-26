@@ -26,7 +26,8 @@ export async function register(request: FastifyRequest, reply: FastifyReply) {
       })
     }
     
-    return reply.status(500).send()
+    // Ao fazer dessa forma é o Fastify que lida com esse tipo de erro e mostra de uma forma mais organizada
+    throw error
   }
 
 
