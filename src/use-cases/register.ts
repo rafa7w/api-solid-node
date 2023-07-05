@@ -13,7 +13,8 @@ interface RegisterUseCaseResponse {
   user: User;
 }
 
-// Aplicação de Inversão de Dependência (SOLID)
+// Para criar um usuário em qualquer lugar da aplicação, basta chamar esse Caso de Uso
+// Aplicação de Inversão de Dependência (SOLID) = ao invés da classe instanciar as dependências que ela precisa, ela recebe as dependências como parâmetro 
 export class RegisterUseCase {
   constructor(private usersRepository: UsersRepository,) {
     this.usersRepository = usersRepository

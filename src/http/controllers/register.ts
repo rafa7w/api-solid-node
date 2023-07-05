@@ -13,6 +13,7 @@ export async function register(request: FastifyRequest, reply: FastifyReply) {
 
   const { name, email, password } = registerBodySchema.parse(request.body)
 
+  // Por poder ser chamada de outra forma (além do método POST de uma requisição HTTP), a criação de usuário foi implementada em outra parte
   try {
     const registerUseCase = makeRegisterUseCase()
 
