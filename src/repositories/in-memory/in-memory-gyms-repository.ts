@@ -1,5 +1,4 @@
 import { Gym } from "@prisma/client";
-import { randomUUID } from "node:crypto";
 import { GymsRepository } from "../gyms-repository";
 
 export class InMemoryGymsRepository implements GymsRepository {
